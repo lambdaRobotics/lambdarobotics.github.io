@@ -12,7 +12,7 @@
   <body>
     <section class="page-header">
       <h1 class="project-name">Lambda</h1>
-      <h2 class="project-tagline">Our Code, written by sheeple</h2>
+      <h2 class="project-tagline">Our code, written by sheeple</h2>
     </section>
 
     <section class="main-content">
@@ -24,17 +24,27 @@
 <h3>
 <a id="teleop-right-beacon-slammer" class="anchor" href="#teleop-right-beacon-slammer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teleop: Right Beacon Slammer</h3>
 
-<p>With about 20 lines of code, programmer Andy Zhang (<a href="https://github.com/andrewmzhang" class="user-mention">@andrewmzhang</a>) developed a set of conditionals that allow our double jointed right side beacon hitting arm to move up and down using 2 buttons despite having 2 servos. Also note that the arm slams down on the beacon with more speed than it retracts. This script makes it easy on the driver, since he does not have to worry about controlling the directionality of two servos, only about slamming the arm. Gif below:</p>
+<p>With about 20 lines of code, programmer Andy Zhang (<a href="https://github.com/andrewmzhang" class="user-mention">@andrewmzhang</a>) developed a set of conditionals that allow our double jointed right side beacon hitting arm to move up and down using 2 buttons despite having 2 servos. Also note that the arm slams down on the beacon with more speed than it retracts. This script makes it easy on the driver, since he does not have to worry about controlling the directionality of two servos, only about slamming the arm. Video below:</p>
 
 <h3>
-<a id="distance-tracking" class="anchor" href="#distance-tracking" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Distance tracking</h3>
+<a id="auto-compass-bearings" class="anchor" href="#auto-compass-bearings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Auto: Compass bearings</h3>
 
-<p>Within the autonomous, we have a function that allows the robot to position itself the proper distance away from the coloured beacon. The while loop moves the robot forwards and backwards to ensure that the robot is within the accepted interval away from the coloured beacon before performing the dump. Gif below:</p>
+<p>Just like the pirates of old, our robot can tell (in degrees) what cardinal direction it is facing. By calculating the change in degrees, the robot can calculate how much is has turned and how much it still needs to turn. We use this turning sequence to accurately face the beacon for the climber dump. Other methods, such as using time elapsed to calculate the turn, are prone to change when battery voltages fluctuate. Video below:</p>
+
+<h3>
+<a id="auto-white-line-stop" class="anchor" href="#auto-white-line-stop" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Auto: White line stop</h3>
+
+<p>Instead of looking for red or blue values, we stop our robot on the white line by telling the colour sensor to look for a Green value. Since gray, red, and blue do not contain RGB components of green, the stop will only when it moves over a white line. This allows us to use the same white line stop sequence for both red and blue sides of the field. Video below:</p>
+
+<h3>
+<a id="auto-distance-tracking" class="anchor" href="#auto-distance-tracking" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Auto: Distance tracking</h3>
+
+<p>Within the autonomous, we have a function that allows the robot to position itself the proper distance away from the coloured beacon. The while loop moves the robot forwards and backwards to ensure that the robot is within the accepted interval away from the coloured beacon before performing the dump. Video below:</p>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
-<p>The programs were written and tested by these team members: Andrew Zhang (<a href="https://github.com/andrewmzhang" class="user-mention">@andrewmzhang</a>), Alan Shen (<a href="https://github.com/roboticsenthusiast" class="user-mention">@roboticsenthusiast</a>) Andrew Chen (<a href="https://github.com/dsetreg" class="user-mention">@dsetreg</a>), Hari Subbaraj (<a href="https://github.com/hsubbaraj" class="user-mention">@hsubbaraj</a>), and Abdulvasey Mohammed (<a href="https://github.com/furkhan324" class="user-mention">@furkhan324</a>).</p>
+<p>The programs were written and tested by these team members: Andrew Zhang (<a href="https://github.com/andrewmzhang" class="user-mention">@andrewmzhang</a>), Alan Shen (<a href="https://github.com/roboticsenthusiast" class="user-mention">@roboticsenthusiast</a>) Andrew Chen (<a href="https://github.com/dsetreg" class="user-mention">@dsetreg</a>), Hari Subbaraj (<a href="https://github.com/hsubbaraj" class="user-mention">@hsubbaraj</a>), and Abdulvasey Mohammed (<a href="https://github.com/furkhan324" class="user-mention">@furkhan324</a>). Feel free to ask any Lambda member to explain how the code works. While you're at it, say hi to our lamb, Da!</p>
 
       <footer class="site-footer">
 
